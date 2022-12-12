@@ -13,9 +13,20 @@ aside a{
     color: white;
 }
 #main-row >:first-child {
-   width: 120px; 
+   width: 120px;
 }
 main .row>* {
     background-color: goldenrod;
     border: 1px solid black;
+}
+#left-row{
+    width: 65%;
+    /* background-color: lightcoral; */
+}
+#right-row{
+    width: 35%;
+    /* background-color: lightgreen; */
+}
+main.col-11{
+    width: calc(100% - 120px);
 }

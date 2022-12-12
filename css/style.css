@@ -15,3 +15,7 @@ aside a{
 #main-row >:first-child {
    width: 120px; 
 }
+main .row>* {
+    background-color: goldenrod;
+    border: 1px solid black;
+}

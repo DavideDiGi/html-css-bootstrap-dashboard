@@ -1,0 +1,17 @@
+header .row{
+    height: 40px;
+}
+header .row>* {
+    background-color: white;
+    border: 1px solid black;
+}
+#main-row{
+    height: calc(100vh - 72px);
+}
+aside a{
+    text-decoration: none;
+    color: white;
+}
+#main-row >:first-child {
+   width: 120px; 
+}

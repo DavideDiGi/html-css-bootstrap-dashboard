@@ -14,6 +14,7 @@ aside a{
 }
 #main-row >:first-child {
    width: 120px;
+   max-height: calc(100vh - 72px);
 }
 main .row>* {
     background-color: goldenrod;
@@ -29,4 +30,36 @@ main .row>* {
 }
 main.col-11{
     width: calc(100% - 120px);
+    overflow: auto;
+    margin-left: 120px
+}
+
+
+
+
+
+
+
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 992px){ 
+    section.main-content{
+        padding-right:0
+    }
+    #left-row{
+        width: 100%;
+        
+        /* background-color: lightcoral; */
+    }
+    #right-row{
+        width: 100%;
+        /* background-color: lightgreen; */
+    }
+    section.main-content{
+        flex-wrap: wrap;
+    }
+    #right-row> .col:first-child{
+        margin-top: 25px;
+    }
 }

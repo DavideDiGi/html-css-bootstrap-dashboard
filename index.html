@@ -16,7 +16,7 @@
     <div class="container-fluid bg-success gx-0">
 
         <!-- HEADER -->
-        <header class="py-3 bg-info">
+        <header class="py-3 bg-info position-sticky top-0">
 
             <div class="row text-center gx-0">
 
@@ -37,14 +37,14 @@
         </header>
         <!-- FINE HEADER -->
 
-        <div id="main-row" class="row gx-0">
+        <div id="main-row" class="row gx-0 overflow-scroll">
 
-            <div class="col-1 pe-0 bg-danger">    
+            <div class="col-1 pe-0 bg-danger position-fixed h-100">    
 
                 <!-- ASIDE -->
-                <aside class="mx-3 h-100 bg-light d-flex flex-column justify-content-between flex-nowrap">
+                <aside class="mx-3 bg-light d-flex flex-column justify-content-between flex-nowrap h-100">
 
-                    <div class="top-left-nav text-bg-dark pt-3">
+                    <div class="top-left-nav text-bg-dark pt-3 ">
 
                         <ul class="list-unstyled lh-lg">
 
@@ -92,7 +92,7 @@
             <!-- <div id="main" class="col-11">    -->
                 
             <!-- MAIN -->
-            <main class="col-11">
+            <main class="col-11 ">
 
                 <!-- HEADER MAIN -->
                 <section class="header-main text-bg-primary">
@@ -131,7 +131,7 @@
                 <!-- FINE HEADER MAIN -->
                 
                 <!--  -->
-                <section class="main-content bg-light d-flex p-3 bg-dark">
+                <section class="main-content bg-light d-flex p-3 bg-dark pe-md-0 overflow-auto">
 
                     <div id="left-row" class="row gx-0 me-4 flex-column">
 
@@ -149,7 +149,7 @@
 
                     </div>
 
-                    <div id="right-row" class="row gx-0 flex-column">
+                    <div id="right-row" class="row gx-0 me-4 flex-column">
 
                         <div class="col ps-3 pt-2 pb-2">
                             <h4 class="fw-light d-inline-block align-middle">Todo</h4>

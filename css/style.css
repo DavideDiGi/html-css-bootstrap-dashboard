@@ -18,9 +18,9 @@ header .row .col-auto.lh-1 ul li a{
 header .row .col-auto.lh-1 ul li:last-child a{
     color: orange;
 }
-/* #main-row {
+#main-row {
     height: calc(100vh - 72px);
-} */
+}
 aside a{
     text-decoration: none;
     color: white;
@@ -206,3 +206,5 @@ section.main-content #left-row .col>.question3:active ~ .answer3  {
         margin-top: 25px;
     }
 }
+
+

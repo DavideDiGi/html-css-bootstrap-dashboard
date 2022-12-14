@@ -13,23 +13,31 @@
 
 </head>
 <body>
-    <div class="container-fluid bg-success gx-0">
+    <div class="container-fluid gx-0">
 
         <!-- HEADER -->
-        <header class="py-3 bg-info position-sticky top-0">
+        <header class="bg-light position-sticky top-0">
 
-            <div class="row text-center gx-0">
+            <div class="row text-center gx-0 d-flex">
 
-                <div class="col-1 py-2">
-                    LOGO
+                <div class="col-auto ps-3 pt-1 pe-3">
+                    <img src="img/logo.svg" alt="long-logo">
+                    <img src="img/mobile-logo.png" alt="short-logo">
                 </div>
 
-                <div class="col-10 py-2">
-                    SEARCH
+                <div class="col flex-grow-1">
+                    <form class="mx-2" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search">
+                    </form>
                 </div>
 
-                <div class="col-1 py-2">
-                    NAV
+                <div class="col-auto lh-1 pt-2">
+                    <ul class="list-unstyled d-flex justify-content-around">
+                        <li><a href="#"><i class="fa-solid fa-list"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-circle-question"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a></li>
+                        <li><a class="me-3" href="#"><i class="fa-solid fa-bell"></i></a></li>
+                    </ul>
                 </div>
 
         </div>
@@ -39,32 +47,32 @@
 
         <div id="main-row" class="row gx-0 overflow-scroll">
 
-            <div class="col-1 pe-0 bg-danger position-fixed h-100">    
+            <div class="col-auto pe-0 position-fixed h-100">    
 
                 <!-- ASIDE -->
-                <aside class="mx-3 bg-light d-flex flex-column justify-content-between flex-nowrap h-100">
+                <aside class="px-3 bg-dark d-flex flex-column justify-content-between flex-nowrap">
 
-                    <div class="top-left-nav text-bg-dark pt-3 ">
+                    <div class="top-left-nav pt-3 ">
 
                         <ul class="list-unstyled lh-lg">
 
                             <li>
                                 <a href="#">
-                                    <span class="icon me-2">O</span>
+                                    <span class="icon me-2"><i class="fa-solid fa-house"></i></span>
                                     <span>Home</span>
                                 </a>
                             </li>
 
                             <li>
                                 <a href="#">
-                                    <span class="icon me-2">O</span>
+                                    <span class="icon me-2"><i class="fa-solid fa-chart-simple"></i></span>
                                     <span>Stats</span>
                                 </a>
                             </li>
 
                             <li>
                                 <a href="#">
-                                    <span class="icon me-2">O</span>
+                                    <span class="icon me-2"><i class="fa-solid fa-signal"></i></span>
                                     <span>Signals</span>
                                 </a>
                             </li>
@@ -74,11 +82,11 @@
                     </div>
                     
 
-                    <div class="bottom-left-nav bg-info">
+                    <div class="bottom-left-nav pb-3">
 
                         <a href="#">
-                            <span class="icon me-3">O</span>
-                            <span>Signals</span>
+                            <span class="icon me-2"><i class="fa-solid fa-gear"></i></span>
+                            <span>Admin</span>
                         </a>
                         
                     </div>
@@ -88,29 +96,30 @@
 
             </div> 
             
-            
-            <!-- <div id="main" class="col-11">    -->
                 
             <!-- MAIN -->
-            <main class="col-11 ">
+            <main class="col-fluid ">
 
                 <!-- HEADER MAIN -->
                 <section class="header-main text-bg-primary">
-                    
+
                     <div class="row gx-0 px-3 py-3">
 
                         <div class="col-6">
 
                             <h3 class="fw-light d-inline-block align-middle">Boolean</h3>
-                            <span class="badge rounded-pill text-bg-dark fw-light">Primary</span>
+                            <span class="badge rounded-pill text-bg-dark fw-light">Piano blaze</span>
                             
                             <br>
 
-                            <span class="badge rounded-pill text-bg-dark fw-light">Primary</span> 
+                            <span class="badge rounded-pill text-bg-dark fw-light">3 app</span> 
                             <i class="fa-solid fa-angles-right align-middle"></i>
-                            <span class="badge rounded-pill text-bg-dark fw-light">Boolean mobile app</span> 
-                            <span class="badge rounded-pill text-bg-dark fw-light">Boolean web app</span> 
-                            <span class="badge rounded-pill text-bg-dark fw-light">Boolean blog app</span> 
+                            <span class="apps badge rounded-pill text-bg-dark fw-light">Boolean mobile app</span> 
+                            <span class="apps badge rounded-pill text-bg-dark fw-light">Boolean web app</span> 
+                            <span class="apps badge rounded-pill text-bg-dark fw-light">Boolean blog app</span> 
+                            <span class="plus d-none badge rounded-pill text-bg-dark fw-light">
+                                +
+                            </span> 
 
                             
                             
@@ -123,45 +132,296 @@
 
                         <div class="col-2">
                             <span>Nuovo studente</span>
-                            <button class="ms-3">+</button>
+                            
+                            <button class="btn btn-primary border ms-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-plus"></i></button>
+                            
+                            <div class="offcanvas offcanvas-end"             tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                                <div class="offcanvas-header">
+
+                                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    ...
+                                </div>
+                            </div>
                         </div>
 
                     </div>
                 </section>
                 <!-- FINE HEADER MAIN -->
                 
-                <!--  -->
-                <section class="main-content bg-light d-flex p-3 bg-dark pe-md-0 overflow-auto">
+                <!-- MAIN MAIN -->
+                <section class="main-content d-flex p-3 pe-md-0 overflow-auto">
 
+                    <!-- PRIMA TABLE -->
                     <div id="left-row" class="row gx-0 me-4 flex-column">
 
                         <div class="col ps-3 pt-2 pb-2">
                             <h4 class="fw-light d-inline-block align-middle">Prossime classi</h4>
                         </div>
                         
-                        <div class="col ps-3 pt-2 pb-2 bg-light">ciao</div>
+                        <div class="col ps-3 pt-2 pb-2 bg-white">
 
+                            <table class="table table-hover text-center align-middle">
+                                
+                                <thead>
+
+                                    <tr>
+
+                                        <th class="col-6 text-start" scope="col">Nome</th>
+                                        <th scope="col">Data inizio</th>
+                                        <th scope="col">ROI</th>
+                                        <th scope="col">Stato</th>
+                                        <th scope="col">Azioni</th>
+
+                                    </tr>
+
+                                </thead>
+
+                                <tbody>
+                                    <!-- PRIMA RIGA TABELLA -->
+                                    <tr>
+                                        <th class="text-start" scope="row">
+                                            <img src="img/class-avatar.jpg" alt="">
+                                            <span class="fw-light ms-2">Classe 75</span>
+                                        </th>
+                                        <td>15 Feb 2021</td>
+                                        <td>20%</td>
+                                        <td><span class="badge text-bg-success">Done</span></td>
+                                        <td>
+                                            <button type="button" class="btn btn-outline-secondary" disabled>
+                                                <i class="fa-solid fa-pencil"></i>
+                                            </button>
+                                            
+                                            <button type="button" class="btn btn-outline-secondary" disabled>
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                    <!-- SECONDA RIGA TABELLA -->
+                                    <tr>
+                                        <th class="text-start" scope="row">
+                                            <img src="img/class-avatar.jpg" alt="">
+                                            <span class="fw-light ms-2">Classe 76</span>
+                                        </th>
+                                        <td>16 Feb 2021</td>
+                                        <td>20%</td>
+                                        <td><span class="badge text-bg-success">Done</span></td>
+                                        <td>
+                                            <button type="button" class="btn btn-outline-secondary" disabled>
+                                                <i class="fa-solid fa-pencil"></i>
+                                            </button>
+                                            
+                                            <button type="button" class="btn btn-outline-secondary" disabled>
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                    <!-- TERZA RIGA TABELLA -->
+                                    <tr>
+                                        <th class="text-start" scope="row">
+                                            <img src="img/class-avatar.jpg" alt="">
+                                            <span class="fw-light ms-2">Classe 77</span>
+                                        </th>
+                                        <td>17 Feb 2021</td>
+                                        <td>20%</td>
+                                        <td><span class="badge bg-warning">process</span></td>
+                                        <td>
+                                            <button type="button" class="btn btn-outline-secondary" disabled>
+                                                <i class="fa-solid fa-pencil"></i>
+                                            </button>
+                                            
+                                            <button type="button" class="btn btn-outline-secondary" disabled>
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                    <!-- QUARTA RIGA TABELLA -->
+                                    <tr>
+                                        <th class="text-start" scope="row">
+                                            <img src="img/class-avatar.jpg" alt="">
+                                            <span class="fw-light ms-2">Classe 78</span>
+                                        </th>
+                                        <td>18 Feb 2021</td>
+                                        <td>20%</td>
+                                        <td><span class="badge text-bg-success">Done</span></td>
+                                        <td>
+                                            <button type="button" class="btn btn-outline-secondary" disabled>
+                                                <i class="fa-solid fa-pencil"></i>
+                                            </button>
+                                            
+                                            <button type="button" class="btn btn-outline-secondary" disabled>
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                    <!-- QUINTA RIGA TABELLA -->
+                                    <tr>
+                                        <th class="text-start" scope="row">
+                                            <img src="img/class-avatar.jpg" alt="">
+                                            <span class="fw-light ms-2">Classe 79</span>
+                                        </th>
+                                        <td>19 Feb 2021</td>
+                                        <td>20%</td>
+                                        <td><span class="badge text-bg-danger">failed</span></td>
+                                        <td>
+                                            <button type="button" class="btn btn-outline-secondary" disabled>
+                                                <i class="fa-solid fa-pencil"></i>
+                                            </button>
+
+                                            <button type="button" class="btn btn-outline-secondary" disabled>
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                    <!-- SETTIMA RIGA TABELLA -->
+                                    <tr>
+                                        <th class="text-start" scope="row">
+                                            <img src="img/class-avatar.jpg" alt="">
+                                            <span class="fw-light ms-2">Classe 80</span>
+                                        </th>
+                                        <td>20 Feb 2021</td>
+                                        <td>20%</td>
+                                        <td><span class="badge text-bg-success">Done</span></td>
+                                        <td>
+                                            <button type="button" class="btn btn-outline-secondary" disabled>
+                                                <i class="fa-solid fa-pencil"></i>
+                                            </button>
+
+                                            <button type="button" class="btn btn-outline-secondary" disabled>
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                    <!-- OTTAVA RIGA TABELLA -->
+                                    <tr>
+                                        <th class="text-start" scope="row">
+                                            <img src="img/class-avatar.jpg" alt="">
+                                            <span class="fw-light ms-2">Classe 81</span>
+                                        </th>
+                                        <td>21 Feb 2021</td>
+                                        <td>20%</td>
+                                        <td><span class="badge text-bg-danger">failed</span></td>
+                                        <td>
+                                            <button type="button" class="btn btn-outline-secondary" disabled>
+                                                <i class="fa-solid fa-pencil"></i>
+                                            </button>
+
+                                            <button type="button" class="btn btn-outline-secondary" disabled>
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                    <!-- ULTIMA RIGA TABELLA -->
+                                    <tr>
+                                        <th class="text-start" scope="row">
+                                            <img src="img/class-avatar.jpg" alt="">
+                                            <span class="fw-light ms-2">Classe 82</span>
+                                        </th>
+                                        <td>22 Feb 2021</td>
+                                        <td>20%</td>
+                                        <td><span class="badge text-bg-success">Done</span></td>
+                                        <td>
+                                            <button type="button" class="btn btn-outline-secondary" disabled>
+                                                <i class="fa-solid fa-pencil"></i>
+                                            </button>
+
+                                            <button type="button" class="btn btn-outline-secondary" disabled>
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+                        <!-- FINE PRIMA TABLE -->
+
+                        <!-- SECONDA TABLE -->
                         <div class="col ps-3 pt-2 pb-2 mt-4">
                             <h4 class="fw-light d-inline-block align-middle">F.A.Q.</h4>
                         </div>
 
-                        <div class="col ps-3 pt-2 pb-2 bg-light">ciao</div>
+                        <div class="col ps-3 pt-4 pb-2 bg-white">
+
+                            <div class="question1 ps-3 pe-5 d-flex justify-content-between position-relative">
+                                <span>Come aggiungere un nuovo studente?</span>
+                                <span><i class="fa-solid fa-angle-down"></i></span>
+                                <span><i class="fa-solid fa-angle-up"></i></span>
+                            </div> 
+
+                            <div class="ps-3 pt-3 d-none answer1">Cliccando sul tasto aggiungi "+"</div> 
+
+                            <hr class="me-3">
+
+                            <div class="question2 ps-3 pe-5 d-flex justify-content-between position-relative">
+                                <span>Come posso accedere alle informazioni del mio account?</span>
+                                <span><i class="fa-solid fa-angle-down"></i></span>
+                                <span><i class="fa-solid fa-angle-up"></i></span>
+                            </div> 
+
+                            <div class="ps-3 pt-3 d-none answer2">Cliccando sul tasto aggiungi "+"</div> 
+
+                            <hr class="me-3">
+
+                            <div class="question3 ps-3 pb-3 pe-5 d-flex justify-content-between position-relative">
+                                <span>Posso usare questa dashboard da mobile?</span>
+                                <span><i class="fa-solid fa-angle-down"></i></span>
+                                <span><i class="fa-solid fa-angle-up"></i></span>
+                            </div>  
+
+                            <div class="ps-3  d-none answer3">Si</div> 
+
+                        </div>
+                        <!-- FINE SECONDA TABLE -->
+                        
 
                     </div>
 
                     <div id="right-row" class="row gx-0 me-4 flex-column">
 
+                        <!-- TERZA TABLE -->
                         <div class="col ps-3 pt-2 pb-2">
                             <h4 class="fw-light d-inline-block align-middle">Todo</h4>
                         </div>
 
-                        <div class="col ps-3 pt-2 pb-2 bg-light">ciao</div>
-
-                        <div class="col ps-3 pt-2 pb-2 mt-4">
-                            <h4 class="fw-light d-inline-block align-middle">Graphic</h4>
+                        <div class="col ps-3 pt-3 pb-3 bg-light bg-white">
+                            <ul class="list-group">
+                                <li class="list-group-item" aria-disabled="true"><input type="checkbox" > Kickoff</li>
+                                <li class="list-group-item" aria-disabled="true"><input type="checkbox" > Lezione su Bootstrap 5 in classe #75</li>
+                                <li class="list-group-item" aria-disabled="true"><input type="checkbox" > Controllare username github studenti</li>
+                              </ul>
                         </div>
+                        <!-- FINE TERZA TABLE -->
 
-                        <div class="col ps-3 pt-2 pb-2 bg-light">ciao</div>
+                        <!-- QUARTA TABLE -->
+                        <div class="col ps-3 pt-3 pb-3 px-3 mt-4 bg-white">
+                            <div class="stats border">
+                                <img class="w-100" src="img/stats.jpeg" alt="">
+                                <div class="utents ps-3 pt-3 pb-3 px-3">
+                                    <h4>Utenti attivi</h4>
+                                    <div>Lista degli utenti attivi in piattaforma nell'ultimo mese</div>
+                                </div>
+                            </div>
+                            <div class="jan pt-2 border pb-2 ps-3">Gennaio: 1200</div>
+                            <div class="feb pt-2 border pb-2 ps-3">Febbraio: 800</div>
+                            <div class="mar pt-2 border pb-2 ps-3">Marzo: 1500</div>
+                            <div class="mar pt-3 border pb-3 ps-3">
+                                <a href="#">Visualizza report approfondito</a>
+                            </div>
+                        </div>
+                        <!-- FINE QUARTA TABLE -->
 
                     </div>
 
